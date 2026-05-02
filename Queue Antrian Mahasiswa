@@ -1,0 +1,27 @@
+# Queue Antrian Mahasiswa
+# pseudocode
+BEGIN
+    queue = empty
+    ENQUEUE "Student 1"
+    ENQUEUE "Student 2"
+    ENQUEUE "Student 3"
+    PRINT queue
+    DEQUEUE
+    PRINT queue
+END
+
+# implementasi python
+from collections import deque
+
+queue = []
+antrian = deque()
+
+antrian.append("Mahasiswa 1")
+antrian.append("Mahasiswa 2")
+antrian.append("Mahasiswa 3")
+
+print("Antrian awal:", list(antrian))
+
+antrian.popleft()
+
+print("Setelah dequeue:", list(antrian))
